@@ -4,7 +4,7 @@ function Nav() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
    <a className="navbar-brand ms-4" href="#hero">
-        <img src="/logo.png"alt="A orange circle with the Initials JD in white" height="64" />
+        <img src="/logo.png"alt="A orange circle with the Initials JD in white" height="58" />
       </a>
         <button
           className="navbar-toggler"
