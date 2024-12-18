@@ -62,3 +62,22 @@
     gap: .5rem;
     margin-top: auto; /* Push the buttons to the bottom */
 }
+
+/*Mobile*/
+@media (max-width: 1000px) {
+    #projects {
+        padding: 0 4rem;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects {
+        padding: 0 2rem;
+    }
+    .button-container{
+        justify-content: center;
+    }
+}
