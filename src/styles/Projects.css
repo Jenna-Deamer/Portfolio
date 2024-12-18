@@ -1,0 +1,7 @@
+#projects{
+    min-height: calc(100vh - 90px);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    color: var(--white);
+}

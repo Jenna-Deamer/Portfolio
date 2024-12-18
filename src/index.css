@@ -1,6 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --font-primary: 'Poppins', sans-serif;
+
+    /* Font sizes */
+    --font-size-hero: 3rem;
+    /* Main heading, Hero section */
+    --font-size-subtitle: 1.5rem;
+    /* Subheadings */
+    --font-size-body: 1rem;
+    /* Regular body text */
+    --font-size-small: 0.875rem;
+    /* Small text */
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+
+    /* Line heights */
+    --line-height-heading: 1.2;
+    --line-height-body: 1.5;
+
+    /* Letter spacing */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+
+    /* Colors */
+    --primary-color: #0B2B40;
+    --blue: #004267;
+    --white: #F5F5F5;
+    --black: #0A0A0A;
+
+    --action-color: #e07c1f;
+    --action-color-hover: #ff9e4f;
+    --action-active-color: #ff7e00;
+}
+
+/* Global styles */
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: unset;
+    padding: unset;
+}
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--white);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+    font-size: var(--font-size-hero);
+}
+
+h2 {
+    font-size: var(--font-size-subtitle);
+}
+
+/* Small text */
+small {
+    font-size: var(--font-size-small);
+    color: var(--color-secondary);
+}
+
+main {
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 47% 98%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 53% 90%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 17% 34%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 85% 36%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 22% 21%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 99% 30%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 82% 84%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 62% 49%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 85% 14%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 89% 22%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 37% 65%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 57% 27%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 95% 91%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 85% 34%, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 7% 65%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 69% 41%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 33% 2%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 57% 84%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 80% 86%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 24% 45%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), linear-gradient(45deg, rgb(45, 149, 193), rgb(50, 50, 175));
 }

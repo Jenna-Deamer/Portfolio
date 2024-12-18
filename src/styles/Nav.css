@@ -1,0 +1,25 @@
+.navbar {
+    background-color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+    
+}
+.navbar-nav .nav-item .nav-link {
+    color: var(--white);
+    transition: ease-in-out .4s;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--action-color);
+}
+/*LOGO*/
+nav img {
+    border: 2px solid transparent;
+
+}
+
+nav img:hover {
+    border: 2px solid var(--white);
+    border-radius: 100em;
+    transition: ease-in-out .4s;
+    transform: scale(1.1);
+}
+

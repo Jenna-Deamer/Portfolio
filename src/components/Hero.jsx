@@ -5,6 +5,9 @@ function Hero() {
     <>
       <section id="hero">
         <div className="hero-container">
+            <div className="image-content">
+            <img src="/profile.webp" alt="Jenna Deamer" />
+          </div>
           <div className="text-content">
             <h1>Hello, I&apos;m Jenna&nbsp;Deamer</h1>
             <p>
@@ -18,9 +21,7 @@ function Hero() {
               <a href="#projects" className="cta-button">View Work</a>  <a href="" className="cta-button">Resume</a>
             </div>
           </div>
-          <div className="image-content">
-            <img src="/profile.webp" alt="Jenna Deamer" />
-          </div>
+        
         </div>
       </section>
     </>
