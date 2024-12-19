@@ -23,8 +23,8 @@ function Projects() {
                {card.description}
               </div>
               <div className="button-container">
-                <a href={card.demoUrl} className="cta-button">Demo</a>
-                <a href={card.githubUrl} className="cta-button">Github</a>
+                <a href={card.demoUrl} className="cta-button"><i className="bi bi-laptop"></i> Demo</a>
+                <a href={card.githubUrl} className="cta-button"><i className="bi bi-github"></i> Github</a>
               </div>
             </article>
           ))}
