@@ -82,3 +82,23 @@ small {
     color: var(--color-secondary);
 }
 
+/*Buttons*/
+.cta-button {
+    color: var(--white);
+    background-color: var(--action-color);
+    border: 2px solid var(--action-color);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+    min-width: 150px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--action-color-hover);
+  }
+
+

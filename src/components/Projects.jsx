@@ -5,7 +5,6 @@ function Projects() {
     <>
       <section id="projects">
         <h2 className="text-center">My Work</h2>
-
         <section className="projects-container">
           {projectCards.map((card, index) => (
             <article key={index} className="projects-card">

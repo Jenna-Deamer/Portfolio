@@ -1,0 +1,38 @@
+#contact {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    color: var(--white);  
+  }
+
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #contact fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  #contact label {
+    margin-top: 8px;
+  }
+  
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact textarea {
+    padding: 8px;
+  }
+  
+  
+  #contact textarea {
+    height: 120px;
+  }
+  
+  #contact button {
+   margin: 20px 0;
+  }
