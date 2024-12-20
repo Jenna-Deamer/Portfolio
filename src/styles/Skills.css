@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8rem;
+    padding: 4rem 0;
 }
 
 .skills-container {
@@ -21,4 +21,17 @@
     text-align: center;
     padding: 1.5rem;
     border-radius: 8px;
+}
+
+/*MOBILE*/
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
 }
