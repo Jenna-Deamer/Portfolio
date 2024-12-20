@@ -35,6 +35,11 @@ function Footer() {
           <i className="bi bi-file-earmark-text-fill"></i>
         </a>
                 </div>
+                <div className="copyright">
+        <small>
+          &copy;2025 Jenna Deamer. All rights reserved.
+        </small>
+      </div>
             </footer>
         </>
     )

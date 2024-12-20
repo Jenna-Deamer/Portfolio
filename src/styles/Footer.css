@@ -14,5 +14,12 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding-top: 1rem;
+}
+.copyright{
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    padding-bottom: 1rem;
+    font-style: italic;
 }
