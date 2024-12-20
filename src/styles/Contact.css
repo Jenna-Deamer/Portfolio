@@ -31,8 +31,14 @@
   #contact input[type="email"],
   #contact textarea {
     padding: 8px;
+    border: 1px solid #ccc;
   }
-  
+  #contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  border-color: var(--action-color);
+  outline: none;
+}
   
   #contact textarea {
     height: 120px;

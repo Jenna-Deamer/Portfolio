@@ -2,7 +2,7 @@ import "../styles/Contact.css";
 function Contact() {
     const handleSubmit = async (event) => {
       event.preventDefault();
-      alert('Form submitted successfully I\'ll get back to you as soon as I can!');
+      alert('Thank you for your message! I will get back to you as soon as possible.');
     };
   
     return (
@@ -37,6 +37,8 @@ function Contact() {
               name="message"
               required
               placeholder="Enter your message"
+              maxLength={500}
+              minLength={10}
             ></textarea>
             <button type="submit" className="cta-button">Submit</button>
        </fieldset>
