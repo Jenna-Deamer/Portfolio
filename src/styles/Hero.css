@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
     min-height: 100vh;
+    padding-top: 8rem;
   }
   
   .hero-container {
@@ -44,6 +45,8 @@
   @media (max-width: 900px) {
     #hero {
       padding: 0 2rem;
+     padding-top: 164px;
+    
     }
     .hero-container{
       grid-template-columns: 1fr;
