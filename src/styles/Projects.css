@@ -1,5 +1,5 @@
 #projects {
-   min-height: calc(100vh - var(--navbar-height));
+  min-height: 100vh;
 }
 
 .projects-container {
