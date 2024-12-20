@@ -1,9 +1,5 @@
 #projects {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 1rem;
-    color: var(--white);
-    min-height: 100vh;
+   min-height: calc(100vh - var(--navbar-height));
 }
 
 .projects-container {

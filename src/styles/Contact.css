@@ -1,14 +1,19 @@
 #contact {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 1rem;
-    color: var(--white);  
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 50vh;
+  /*center in container*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   }
 
   #contact form {
+    /*Center fields*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
   #contact fieldset {

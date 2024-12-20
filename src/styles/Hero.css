@@ -1,11 +1,9 @@
 #hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1200px;
-    height: 100vh;
-    color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    min-height: calc(100vh - var(--navbar-height));
+
   }
   
   .hero-container {

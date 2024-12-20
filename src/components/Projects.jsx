@@ -5,7 +5,7 @@ function Projects() {
     <>
       <section id="projects">
         <h2 className="text-center">My Work</h2>
-        <section className="projects-container">
+        <div className="projects-container">
           {projectCards.map((card, index) => (
             <article key={index} className="projects-card">
               <div className="project-thumbnail">
@@ -27,7 +27,7 @@ function Projects() {
               </div>
             </article>
           ))}
-        </section>
+        </div>
       </section>
     </>
   );
