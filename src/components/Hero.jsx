@@ -1,11 +1,12 @@
 import "../styles/Hero.css";
+import Skills from "./Skills";
 
 function Hero() {
   return (
     <>
       <section id="hero">
         <div className="hero-container">
-            <div className="image-content">
+          <div className="image-content">
             <img src="/profile.webp" alt="Jenna Deamer" />
           </div>
           <div className="text-content">
@@ -18,11 +19,12 @@ function Hero() {
               and working on exciting projects in my spare&nbsp;time.
             </p>
             <div className="hero-buttons">
-              <a href="#projects" className="cta-button">View Work</a>  <a href="" className="cta-button">Resume</a>
+              <a href="#projects" className="cta-button">View Work</a>  
+              <a href="" className="cta-button">Resume</a>
             </div>
           </div>
-        
         </div>
+        <Skills />
       </section>
     </>
   );
