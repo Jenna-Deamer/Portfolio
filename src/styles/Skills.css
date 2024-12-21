@@ -7,7 +7,7 @@
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
     margin-bottom: 1.5rem;
 }
@@ -21,9 +21,26 @@
     text-align: center;
     padding: 1.5rem;
     border-radius: 8px;
+    height: 220px;
 }
 
-/*MOBILE*/
+.icon {
+    margin-bottom: .5rem;
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    color: var(--action-color);
+}
+
+
+.icon svg:hover {
+    transform: scale(1.2);
+}
+
+/* MOBILE */
 @media (max-width: 900px) {
     .skills-container {
         grid-template-columns: 1fr 1fr;
