@@ -21,7 +21,7 @@
     text-align: center;
     padding: 1.5rem;
     border-radius: 8px;
-    height: 220px;
+    min-height: 220px;
 }
 
 .icon {
