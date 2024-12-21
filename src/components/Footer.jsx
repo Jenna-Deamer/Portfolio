@@ -25,7 +25,7 @@ function Footer() {
         </a>
 
         <a
-          href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Resume.pdf"
+          href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna%20Deamer%20Resume.pdf"
           className="socialLinkBtn border-0"
           target="_blank"
           rel="noopener noreferrer"
