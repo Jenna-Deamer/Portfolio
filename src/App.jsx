@@ -1,7 +1,6 @@
-//Vercel insights import
-import { SpeedInsights } from '@vercel/speed-insights/react';
-//Vercel analytics import
+//Vercel insights & analytics import
 import { inject } from '@vercel/analytics';
+import { SpeedInsights } from '@vercel/speed-insights/react'; 
 // components
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -19,8 +18,8 @@ function App() {
   <Projects />
   <Contact />
   <Footer/>
-  <SpeedInsights />
  </main>
+ <SpeedInsights />
     </>
   )
 }

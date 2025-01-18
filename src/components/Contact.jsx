@@ -3,6 +3,8 @@ function Contact() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       alert('Thank you for your message! I will get back to you as soon as possible.');
+      // reset form
+      event.target.reset();
     };
   
     return (
