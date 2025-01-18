@@ -42,7 +42,10 @@ function Contact() {
               maxLength={500}
               minLength={10}
             ></textarea>
+            <div>
             <button type="submit" className="cta-button">Submit</button>
+            </div>
+
        </fieldset>
           </form>
         </section>

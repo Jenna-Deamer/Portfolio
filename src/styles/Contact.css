@@ -43,8 +43,10 @@
   #contact textarea {
     height: 120px;
   }
-  
+  #contact fieldset div{
+  margin: 0 auto;
+}
   #contact button {
    margin: 20px 0;
+   transition: transform 0.2s ease;
   }
-  

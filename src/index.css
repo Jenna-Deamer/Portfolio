@@ -112,4 +112,9 @@ small {
     background-color: var(--action-color-hover);
   }
 
-
+  .cta-button{
+    transition: transform 0.2s ease;
+  }
+  .cta-button:active {
+    transform: scale(0.95);
+  }
