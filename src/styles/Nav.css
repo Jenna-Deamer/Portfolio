@@ -1,26 +1,56 @@
 .navbar {
     background-color: var(--primary-color);
     font-weight: var(--font-weight-medium);
-    
 }
-.navbar-nav .nav-item .nav-link {
+
+.navbar-nav .nav-link {
     color: var(--white);
-    transition: ease-in-out 0.3s;
+    position: relative;
+    padding: 5px 10px;
 }
-.navbar-nav .nav-item .nav-link:hover {
-    color: var(--action-color);
+
+/* Link Hover Animation */
+.nav-link::before,
+.nav-link::after,
+.nav-link > span::before,
+.nav-link > span::after {
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    transition: all 0.3s ease;
 }
-/*LOGO*/
+
+.nav-link::before,
+.nav-link::after {
+    width: 0;
+    height: 2px;
+}
+
+.nav-link > span::before,
+.nav-link > span::after {
+    width: 2px;
+    height: 0;
+}
+
+.nav-link::before { top: 0; left: 0; }
+.nav-link::after { bottom: 0; right: 0; }
+.nav-link > span::before { left: 0; bottom: 0; }
+.nav-link > span::after { right: 0; top: 0; }
+
+.nav-link:hover::before,
+.nav-link:hover::after { width: 100%; }
+
+.nav-link:hover > span::before,
+.nav-link:hover > span::after { height: 100%; }
+
+/* Logo */
 nav img {
     border: 2px solid transparent;
-    transition: ease-in-out 0.3s;
-
+    transition: all 0.3s ease-in-out;
 }
 
 nav img:hover {
-    border: 2px solid var(--white);
+    border-color: var(--white);
     border-radius: 100em;
-    transition: ease-in-out .4s;
     transform: scale(1.1);
 }
-

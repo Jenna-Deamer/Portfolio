@@ -10,7 +10,6 @@
     --font-size-body: 1rem;
     --font-size-small: 0.875rem;
    
-
     /* Font weights */
     --font-weight-light: 300;
     --font-weight-regular: 400;
@@ -102,7 +101,7 @@ small {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 8px;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.2s ease-out;
     min-width: 150px;
     text-align: center;
     cursor: pointer;
@@ -110,6 +109,7 @@ small {
   
   .cta-button:hover {
     background-color: var(--action-color-hover);
+    transform: translateY(-3px);
   }
 
   .cta-button{
