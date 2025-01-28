@@ -34,6 +34,8 @@
     --action-color-hover: #ff9e4f;
     --action-active-color: #ff7e00;
 
+    --gradient-1: linear-gradient(145deg, var(--primary-color), #0d3b56);
+
 
 }
 

@@ -10,7 +10,7 @@
 }
 
 .projects-card {
-    background-color: #f0f4f8;
+    background-color: var(--white);
     color: var(--black);
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);

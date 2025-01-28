@@ -7,16 +7,16 @@ footer a {
     transition: all 0.2s ease-out;
 }
 
-footer a:hover {
-    color: var(--action-color);
-    transform: translateY(-3px);
-}
 .footer-links-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 1rem;
 }
+.footer-links-wrapper a:hover {
+    color: var(--action-color);
+    transform: translateY(-3px) rotate(5deg);
+  }
 .copyright{
     color: var(--white);
     font-weight: var(--font-weight-medium);
