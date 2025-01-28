@@ -17,7 +17,7 @@ const projectCards = [
     description:
       "Budget Capital is a full-stack budgeting app developed as a practice project using the MERN stack. It allows users to manage their finances effectively by tracking income and expenses, categorizing transactions, and visualizing data through pie charts. Users can also set monthly budgets and view their financial history. Built collaboratively with a friend, the app focuses on user-friendly functionality and practical financial insights.",
     githubUrl: "https://github.com/Jenna-Deamer/Budget-Capital",
-    demoUrl: "https://budget-capital-frontend.onrender.com/",
+    demoUrl: "https://budget-capital-frontend.onrender.com/login",
     AriaLabel: "Visit live Demo of Budget Capital",
     skills: ["React", "Node.js", "Express", "MongoDB"],
   },

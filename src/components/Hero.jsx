@@ -20,7 +20,7 @@ function Hero() {
             </p>
             <div className="hero-buttons">
               <a href="#projects" className="cta-button">View Work</a>  
-              <a href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna%20Deamer%20Resume.pdf" className="cta-button">Resume</a>
+              <a href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna%20Deamer%20Resume.pdf" className="cta-button" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </div>
         </div>

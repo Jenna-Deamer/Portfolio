@@ -58,10 +58,10 @@ function Projects() {
                   <small>{formatSkills(card.skills)}</small>
                 </div>
                 <div className="button-container">
-                  <a href={card.demoUrl} className="cta-button">
+                  <a href={card.demoUrl}  target="_blank" rel="noopener noreferrer" className="cta-button">
                     <i className="bi bi-laptop"></i> Demo
                   </a>
-                  <a href={card.githubUrl} className="cta-button">
+                  <a href={card.githubUrl} className="cta-button"  target="_blank" rel="noopener noreferrer">
                     <i className="bi bi-github"></i> Github
                   </a>
                 </div>
