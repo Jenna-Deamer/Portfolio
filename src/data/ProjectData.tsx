@@ -4,10 +4,11 @@ const projectCards = [
     imgSrc: "/thumbnails/SmartBeachThumbnail.webp",
     imgAlt: "Smart Beach Thumbnail",
     description:
-      "Smart Beach was a group project dedicated to enhancing safety at Station Beach in Kincardine, Ontario. Leveraging machine learning models and APIs developed by students specializing in Machine Learning and Big Data at Georgian College, our team crafted a predictive-based solution accessible through a user-friendly app interface. By integrating real-time data on water and weather conditions, our solution empowers beach visitors with critical insights for a safer, more enjoyable experience. ",
+      "Smart Beach was a semester long group project dedicated to enhancing safety at Station Beach in Kincardine, Ontario. Leveraging machine learning models and APIs developed by students specializing in Machine Learning and Big Data at Georgian College, our team crafted a predictive-based solution accessible through a user-friendly app interface. By integrating real-time data on water and weather conditions, our solution empowers beach visitors with critical insights for a safer, more enjoyable experience. ",
     githubUrl: "https://github.com/C-Blouin/SmartBeach",
     demoUrl: "https://smartbeach.vercel.app/",
     AriaLabel: "Visit live Demo of Smart Beach",
+    skills: ["React"],
   },
   {
     title: "Budget Capital",
@@ -18,6 +19,7 @@ const projectCards = [
     githubUrl: "https://github.com/Jenna-Deamer/Budget-Capital",
     demoUrl: "https://budget-capital-frontend.onrender.com/",
     AriaLabel: "Visit live Demo of Budget Capital",
+    skills: ["React", "Node.js", "Express", "MongoDB"],
   },
 ];
 

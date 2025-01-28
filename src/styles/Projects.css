@@ -1,5 +1,5 @@
 #projects {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .projects-container {
@@ -26,10 +26,6 @@
     animation: slideIn 1s ease-out forwards;
 }
 
-.projects-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
 
 @keyframes slideIn {
     from {
@@ -72,14 +68,24 @@
 .project-thumbnail img:hover {
     transform: scale(1.05);
 }
+/*Card Footer*/
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.project-skill {
+    padding: .5rem;
+    color: #272727;
+}
 
 /*Buttons*/
-.button-container{
-    padding: 1rem;
+.button-container {
     display: flex;
-    justify-content: flex-end;
     gap: .5rem;
-    margin-top: auto; /* Push the buttons to the bottom */
+    padding: .5rem;
 }
 
 /*Mobile*/

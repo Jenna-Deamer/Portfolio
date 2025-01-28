@@ -5,6 +5,11 @@ import projectCards from "../data/ProjectData";
 function Projects() {
   const projectsRef = useRef(null);
 
+  const formatSkills = (skills) => {
+    const formattedSkills = skills.join(" | ");
+    return formattedSkills;
+ }
+
   useEffect(() => {
     // Create an IntersectionObserver to observe when project cards enter the viewport
     const observer = new IntersectionObserver(
@@ -48,13 +53,18 @@ function Projects() {
                 </div>
               </div>
               <div className="project-text-content">{card.description}</div>
-              <div className="button-container">
-                <a href={card.demoUrl} className="cta-button">
-                  <i className="bi bi-laptop"></i> Demo
-                </a>
-                <a href={card.githubUrl} className="cta-button">
-                  <i className="bi bi-github"></i> Github
-                </a>
+              <div className="card-footer">
+                <div className="project-skill">
+                  <small>{formatSkills(card.skills)}</small>
+                </div>
+                <div className="button-container">
+                  <a href={card.demoUrl} className="cta-button">
+                    <i className="bi bi-laptop"></i> Demo
+                  </a>
+                  <a href={card.githubUrl} className="cta-button">
+                    <i className="bi bi-github"></i> Github
+                  </a>
+                </div>
               </div>
             </article>
           ))}
