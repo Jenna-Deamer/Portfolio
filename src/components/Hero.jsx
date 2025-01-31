@@ -1,9 +1,7 @@
 import "../styles/Hero.css";
-import Skills from "./Skills";
 
 function Hero() {
   return (
-    <>
       <section id="hero">
         <div className="hero-container">
           <div className="image-content">
@@ -24,9 +22,8 @@ function Hero() {
             </div>
           </div>
         </div>
-        <Skills />
+        {/* <Skills /> */}
       </section>
-    </>
   );
 }
 

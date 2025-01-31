@@ -5,6 +5,7 @@
   align-items: center;
     min-height: 100vh;
     padding-top: 8rem;
+    max-width: 1200px;
   }
   
   .hero-container {

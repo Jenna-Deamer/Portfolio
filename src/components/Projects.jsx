@@ -38,7 +38,7 @@ function Projects() {
   return (
     <>
       <section id="projects">
-        <h2 className="text-center">My Work</h2>
+        <h2>My Work</h2>
         <div className="projects-container" ref={projectsRef}>
           {projectCards.map((card, index) => (
             <article key={index} className="projects-card">

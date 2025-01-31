@@ -45,9 +45,12 @@ main {
 section {
     scroll-margin-top: 94px;
     margin: 0 auto;
-    max-width: 1200px;
     padding: 0 1rem;
-    color: var(--white);  
+    color: var(--white); 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
 }
 @media (max-width: 990px) {
     section {

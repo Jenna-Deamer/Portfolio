@@ -19,6 +19,9 @@ function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-2">
+          <li className="nav-item">
+              <a className="nav-link" href="#skills">Skills</a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects">Projects</a>
             </li>

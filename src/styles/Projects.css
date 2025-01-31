@@ -1,12 +1,15 @@
 #projects {
     margin-bottom: 8rem;
+    max-width: 1200px;
 }
-
+#projects h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
 .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 1.5rem;
-    margin-top: 1.5rem;
 }
 
 .projects-card {
