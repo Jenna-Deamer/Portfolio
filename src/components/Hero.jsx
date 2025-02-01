@@ -7,7 +7,7 @@ function Hero() {
    
         <div className="hero-container">
           <div className="image-content">
-            <img src="/profile.webp" alt="Jenna Deamer" />
+            <img src="/profile.webp" alt="Image of Jenna Deamer"/>
           </div>
           <div className="text-content">
             <h1>Hello, I&apos;m Jenna&nbsp;Deamer</h1>
