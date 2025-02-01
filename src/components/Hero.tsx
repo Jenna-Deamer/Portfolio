@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/Hero.css";
 import CanvasBackground from "./CanvasBackground";
 function Hero() {

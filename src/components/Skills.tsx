@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/Skills.css";
 import SkillCards from "../data/SkillData";
 

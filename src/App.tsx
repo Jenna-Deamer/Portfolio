@@ -1,3 +1,5 @@
+
+import React from 'react';
 //Vercel insights & analytics import
 import { inject } from '@vercel/analytics';
 import { SpeedInsights } from '@vercel/speed-insights/react'; 
