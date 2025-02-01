@@ -21,6 +21,7 @@ const projectCards = [
     AriaLabel: "Visit live Demo of Budget Capital",
     skills: ["React", "Node.js", "Express", "MongoDB"],
   },
+  
 ];
 
 export default projectCards;

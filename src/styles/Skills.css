@@ -6,6 +6,9 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+.skills-container .skill-card {
+    animation: fadeInUp 1.5s ease-out 0.2s;
+  }
 .skills-wrapper{
     display: flex;
     justify-content: center;
@@ -27,7 +30,8 @@
     padding: 1.5rem;
     border-radius: 15px;
     min-height: 260px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
@@ -88,33 +92,6 @@
     }
   }
   
-  .skills-container .skill-card {
-    animation: fadeInUp 1.5s ease-out 0.2s;
-  }
-
-@keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-4px) rotate(-2deg);
-    }
-
-    50% {
-        transform: translateX(4px) rotate(2deg);
-    }
-
-    75% {
-        transform: translateX(-2px) rotate(-1deg);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
 
 
 /* MOBILE */
