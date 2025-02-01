@@ -5,7 +5,7 @@ function Skills() {
     return (
         <section id="skills">
             <h2>Technical Expertise</h2>
-            <div className="skills-wrapper">
+           
                 <div className="skills-container">
                     {SkillCards.map((card, index) => (
                         <article key={index} className="skill-card">
@@ -17,7 +17,7 @@ function Skills() {
                         </article>
                     ))}
                 </div>
-            </div>
+       
         </section>
 
     )

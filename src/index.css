@@ -147,7 +147,6 @@ small {
       --font-size-small: 0.8rem;
     }
   
-    /* Adjust line heights for better readability on mobile */
     body {
       line-height: var(--line-height-body);
     }
