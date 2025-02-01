@@ -54,3 +54,23 @@ nav img:hover {
     border-radius: 100em;
     transform: scale(1.1);
 }
+/* Mobile Navigation Styles */
+@media screen and (max-width: 991px) {
+    .navbar-nav .nav-link {
+        padding: 10px;
+    }
+
+    /* Remove animation borders on mobile */
+    .nav-link::before,
+    .nav-link::after,
+    .nav-link > span::before,
+    .nav-link > span::after {
+        display: none;
+    }
+
+    /* Add background hover effect for mobile */
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s ease;
+    }
+}
