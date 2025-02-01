@@ -3,15 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    min-height: 100vh;
-    padding-top: 8rem;
-    max-width: 1200px;
+
   }
   
   .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    max-width: 1200px;
   }
 
   .hero-container h1{

@@ -1,8 +1,10 @@
 import "../styles/Hero.css";
-
+import CanvasBackground from "./CanvasBackground";
 function Hero() {
   return (
-      <section id="hero">
+     <section id="hero" style={{ position: 'relative' }}>
+    <CanvasBackground />
+   
         <div className="hero-container">
           <div className="image-content">
             <img src="/profile.webp" alt="Jenna Deamer" />
@@ -22,8 +24,8 @@ function Hero() {
             </div>
           </div>
         </div>
-        {/* <Skills /> */}
       </section>
+
   );
 }
 
