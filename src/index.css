@@ -30,13 +30,18 @@
     --white: #F5F5F5;
     --black: #0A0A0A;
 
+    --deep-blue: #061720;
+    --mid-blue: #0d3b56;
+    --light-blue: #1a4d6d;
+    --deep-orange: #c26316;
+    
     --action-color: #e07c1f;
     --action-color-hover: #ff9e4f;
     --action-active-color: #ff7e00;
 
     --gradient-1: linear-gradient(145deg, var(--primary-color), #0d3b56);
 
-
+  
 }
 
 section {
@@ -48,17 +53,17 @@ section {
     justify-content: center; 
     padding: 1rem;
 }
-/* #hero{
-    background-color: black;
-} */
-#skills{
-    background-color: blue;
+
+#skills {
+    background: linear-gradient(135deg, var(--primary-color), var(--mid-blue));
 }
-#projects{
-    background-color: red;
+
+#projects {
+    background: linear-gradient(135deg, var(--deep-blue), var(--primary-color));
 }
-#contact{
-    background-color: green;
+
+#contact {
+    background: linear-gradient(145deg, var(--mid-blue), var(--light-blue));
 }
 @media (max-width: 990px) {
     section {

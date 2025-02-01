@@ -1,7 +1,7 @@
 #skills {
- 
+    min-height: 80vh; 
+    scroll-margin-top: 80px;
 }
-
 #skills h2{
     text-align: center;
     margin-bottom: 2rem;
@@ -12,6 +12,70 @@
     align-items: center;
 }
 
+
+.skills-container {
+    max-width: 1200px;
+     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+}
+
+.skill-card {
+    background: linear-gradient(145deg, var(--mid-blue), var(--light-blue));
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-height: 260px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    transform: rotate(30deg);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) rotate(1deg) scale(1.02);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.2),
+        0 0 20px var(--action-color),
+        inset 0 0 15px rgba(255, 255, 255, 0.1);
+    border-color: var(--action-color);
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.icon {
+    margin-bottom: .5rem;
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+    color: var(--action-color);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+    
+}
+.skill-card:hover .icon svg {
+    transform: rotate(6deg) scale(1.2) translateY(-2px);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.3));
+}
 /*Animations*/
 @keyframes fadeInUp {
     from {
@@ -50,46 +114,8 @@
     }
 }
 
-.skills-container {
-    max-width: 1200px;
-     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-
-}
-
-.skill-card {
-    background: var(--gradient-1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    border-radius: 8px;
-    min-height: 220px;
-    transition: all 0.3s ease-in-out; 
-}
-.skill-card:hover {
-    transform: scale(1.02) translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
-.icon {
-    margin-bottom: .5rem;
-}
-
-.icon svg {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-    color: var(--action-color);
-}
 
 
-.icon svg:hover {
-    animation: shake .4s ease-in-out;
-}
 
 /* MOBILE */
 @media (max-width: 900px) {
