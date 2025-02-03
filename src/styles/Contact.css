@@ -1,49 +1,76 @@
 #contact {
-  /*center in container*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  }
+    min-height: 80vh;
+    scroll-margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+}
 
-  #contact form {
-    /*Center fields*/
+#contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+}
+
+.contact-details, form {
+    flex: 1;
+    background: var(--light-blue);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-details ul {
+    list-style: none;
+}
+
+.contact-details a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--action-color);
+}
+
+form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--mid-blue);
+    background: var(--mid-blue);
+    color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--action-color);
+}
+
+/*Stack contact info & form on mobile*/
+@media (max-width: 900px) {
+.contact-container{
     flex-direction: column;
     align-items: center;
-    width: 100%;
-  }
-  
-  #contact fieldset {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  #contact label {
-    margin-top: 8px;
-  }
-  
-  #contact input[type="text"],
-  #contact input[type="email"],
-  #contact textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
-  }
-  #contact input[type="text"]:focus,
-#contact input[type="email"]:focus,
-#contact textarea:focus {
-  border-color: var(--action-color);
-  outline: none;
+    gap: 1rem;
 }
-  
-  #contact textarea {
-    height: 120px;
-  }
-  #contact fieldset div{
-  margin: 0 auto;
+.contact-details, form {
+    width: 100%;
 }
-  #contact button {
-   margin: 20px 0;
-   transition: transform 0.2s ease;
-  }
+}
