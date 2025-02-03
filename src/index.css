@@ -160,6 +160,6 @@ small {
 }
 @media (max-width: 990px) {
     section {
-        scroll-margin-top: 174px;
+        scroll-margin-top: 200px;
     }
 }
