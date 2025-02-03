@@ -21,20 +21,42 @@ function Contact() {
                 <div className="contact-container">
                     <div className="contact-details">
                         <h3>Contact Information</h3>
-                        <ul>
-                            <li>
-                                <a href="mailto: JennaDeamer@gmail.com">
+                        <ul className="contact-list">
+                            <li className="contact-item">
+                                <i
+                                    className="bi bi-envelope-at-fill contact-icon"
+                                    aria-hidden="true"
+                                ></i>
+                                <a
+                                    href="mailto:JennaDeamer@gmail.com"
+                                    aria-label="Email Jenna Deamer"
+                                >
                                     JennaDeamer@gmail.com
                                 </a>
                             </li>
-                            <li>
-                                <a href="mailto: JennaDeamer@gmail.com">
-                                    (705)-817-9095
+                            <li className="contact-item">
+                                <i
+                                    className="bi bi-telephone-fill contact-icon"
+                                    aria-hidden="true"
+                                ></i>
+                                <a
+                                    href="tel:+17058179095"
+                                    aria-label="Call Jenna Deamer"
+                                >
+                                    (705) 817-9095
                                 </a>
                             </li>
-                            <li>
-                                <a href="mailto: JennaDeamer@gmail.com">
-                                    JennaDeamer@gmail.com
+                            <li className="contact-item">
+                                <i
+                                    className="bi bi-linkedin contact-icon"
+                                    aria-hidden="true"
+                                ></i>
+                                <a
+                                    href="https://www.linkedin.com/in/your-profile"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Connect on LinkedIn
                                 </a>
                             </li>
                         </ul>
@@ -74,6 +96,10 @@ function Contact() {
                             <div>
                                 <button type="submit" className="cta-button">
                                     Submit
+                                    <i
+                                        className="bi bi-send-fill"
+                                        aria-hidden="true"
+                                    ></i>
                                 </button>
                             </div>
                         </fieldset>

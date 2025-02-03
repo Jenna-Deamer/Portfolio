@@ -1,6 +1,5 @@
 #contact {
     min-height: 80vh;
-    /* scroll-margin-top: 80px; */
     justify-content: center;
     align-items: center;
 }
@@ -20,7 +19,8 @@
     margin-bottom: 2rem;
 }
 
-.contact-details, form {
+.contact-details,
+form {
     flex: 1;
     background: var(--light-blue);
     padding: 2rem;
@@ -31,16 +31,46 @@
     list-style: none;
 }
 
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    color: var(--action-color);
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    width: 24px;
+}
 .contact-details a {
     color: var(--white);
     text-decoration: none;
-    transition: color 0.3s ease;
+    position: relative;
 }
 
-.contact-details a:hover {
-    color: var(--action-color);
+/*Underline on hover*/
+.contact-details a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--action-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
 }
 
+.contact-details a:hover::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/*Form styles*/
 form fieldset {
     border: none;
     display: flex;
@@ -48,7 +78,8 @@ form fieldset {
     gap: 1rem;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 0.75rem;
     border-radius: 4px;
@@ -58,19 +89,31 @@ form input, form textarea {
     transition: border-color 0.3s ease;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     outline: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--action-color);
     border-color: var(--action-color);
+}
+form div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form div button i {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
 }
 
 /*Stack contact info & form on mobile*/
 @media (max-width: 900px) {
-.contact-container{
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-.contact-details, form {
-    width: 100%;
-}
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contact-details,
+    form {
+        width: 100%;
+    }
 }
