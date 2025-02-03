@@ -44,34 +44,24 @@
   
 }
 
-section {
-    margin: 0 auto;
-    color: var(--white); 
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 100%;
-}
-
-#skills {
-    background: linear-gradient(135deg, var(--primary-color), var(--mid-blue));
-}
-
-#projects {
-    background: linear-gradient(135deg, var(--deep-blue), var(--primary-color));
-}
-
-#contact {
-    background: linear-gradient(145deg, var(--mid-blue), var(--light-blue));
-}
-@media (max-width: 990px) {
-    section {
-        scroll-margin-top: 174px;
+@media (max-width: 768px) {
+    :root {
+      /* Reduce font sizes for mobile */
+      --font-size-hero: 2.2rem;
+      --font-size-subtitle: 1.8rem;
+      --font-size-large: 1.2rem;
+      --font-size-body: 0.95rem;
+      --font-size-small: 0.8rem;
     }
-}
+  
+    body {
+      line-height: var(--line-height-body);
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.3;
+    }
+  }
 /* Global styles */
 *{
     box-sizing: border-box;
@@ -143,21 +133,33 @@ small {
     transform: scale(0.95);
   }
 
-  @media (max-width: 768px) {
-    :root {
-      /* Reduce font sizes for mobile */
-      --font-size-hero: 2.2rem;
-      --font-size-subtitle: 1.8rem;
-      --font-size-large: 1.2rem;
-      --font-size-body: 0.95rem;
-      --font-size-small: 0.8rem;
+
+
+  section {
+    margin: 0 auto;
+    color: var(--white); 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+#skills {
+    background: linear-gradient(135deg, var(--primary-color), var(--mid-blue));
+}
+
+#projects {
+    background: linear-gradient(135deg, var(--deep-blue), var(--primary-color));
+}
+
+#contact {
+    background: linear-gradient(145deg, var(--mid-blue), var(--light-blue));
+}
+@media (max-width: 990px) {
+    section {
+        scroll-margin-top: 174px;
     }
-  
-    body {
-      line-height: var(--line-height-body);
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1.3;
-    }
-  }
+}
