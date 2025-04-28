@@ -21,6 +21,18 @@ const projectCards = [
     AriaLabel: "Visit live Demo of Budget Capital",
     skills: ["React", "Node.js", "Express", "MongoDB"],
   },
+  {
+    title: "Outdoor Kitchen Planner",
+    imgSrc: "/thumbnails/outdoorKitchenPlannerThumbnail.png",
+    imgAlt: "Kitchen Planner Thumbnail",
+ description:
+    "Outdoor Kitchen Planner is a web-based proof-of-concept built over 10 weeks for an XR class project. Developed using ReactJS and Three.js, it enables users to select a counter layout (straight or L-shape), add kitchen components like cabinets and fridges, arrange them interactively, and experience their designs in Augmented Reality (AR). Models were purposefully kept lightweight for performance and simplicity, focusing on core interaction",
+    githubUrl: "https://github.com/Jenna-Deamer/Outdoor-kitchen-Planner/tree/main", 
+    demoUrl: "https://outdoor-kitchen-planner.vercel.app/",
+    AriaLabel: "Visit live demo of Kitchen Planner Tool",
+    skills: ["React", "Three.js", "WebXR", "Tinkercad"],
+  },
+  
   
 ];
 
