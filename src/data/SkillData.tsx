@@ -5,35 +5,36 @@ import { faPlug } from '@fortawesome/free-solid-svg-icons';
 
 const SkillCards = [
     {
-        icon: <FontAwesomeIcon icon={faReact}  />,
+        icon: <FontAwesomeIcon icon={faReact} />,
         title: "React.js",
-        description: "Developed interactive web apps with React, focusing on responsive UI and real-time data handling."
+        description: "Developed interactive web applications with React, focusing on responsive design and real-time data handling."
     },
     {
-        icon: <FontAwesomeIcon icon={faDrupal}  />,
+        icon: <FontAwesomeIcon icon={faDrupal} />,
         title: "Drupal",
-        description: "Managed content and updates for multilingual websites for 40+ regions, including creating promotional web forms and landing pages."
+        description: "Managed content and updates for multilingual ecommerce websites across 40+ regions, including building promotional web forms and landing pages."
     },
     {
-        icon: <FontAwesomeIcon icon={faWordpressSimple}  />,
+        icon: <FontAwesomeIcon icon={faWordpressSimple} />,
         title: "WordPress",
-        description: "Customized and managed content for WordPress websites, ensuring smooth updates and functionality across various sites."
+        description: "Customized and maintained WordPress websites, ensuring smooth content updates and reliable functionality."
     },
     {
-        icon: <FontAwesomeIcon icon={faCss3Alt}  />,
+        icon: <FontAwesomeIcon icon={faCss3Alt} />,
         title: "CSS",
         description: "Designed responsive, visually appealing layouts with a focus on cross-browser compatibility and user experience."
     },
     {
         icon: <FontAwesomeIcon icon={faGitAlt} />,
         title: "Git",
-        description: "Collaborated on team projects using Git for version control, ensuring efficient code management and collaboration."
+        description: "Collaborated on team projects using Git for version control, ensuring organized and efficient code management."
     },
     {
         icon: <FontAwesomeIcon icon={faPlug} />,
         title: "API Integration",
-        description: "Integrated external APIs into web applications, enhancing functionality with real-time data, such as weather info for Smart Beach."
+        description: "Integrated external APIs into web applications to enhance functionality, such as adding real-time weather data for Smart Beach."
     }
 ];
+
 
 export default SkillCards;
