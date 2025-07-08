@@ -4,7 +4,7 @@ const projectCards = [
     imgSrc: "/thumbnails/SmartBeachThumbnail.webp",
     imgAlt: "Smart Beach Thumbnail",
     description:
-      "Smart Beach was a semester long group project dedicated to enhancing safety at Station Beach in Kincardine, Ontario. Leveraging machine learning models and APIs developed by students specializing in Machine Learning and Big Data at Georgian College, our team crafted a predictive-based solution accessible through a user-friendly app interface. By integrating real-time data on water and weather conditions, our solution empowers beach visitors with critical insights for a safer, more enjoyable experience. ",
+      "Smart Beach was a semester-long group project aimed at improving safety at Station Beach in Kincardine, Ontario. Our team developed a predictive solution using real-time weather and water data, integrating APIs and machine learning models created by Georgian College students specializing in Big Data and AI. The result was a user-friendly web app that helps beachgoers make informed, safer decisions about when to visit and what to expect at the beach.",
     githubUrl: "https://github.com/C-Blouin/SmartBeach",
     demoUrl: "https://smartbeach.vercel.app/",
     AriaLabel: "Visit live Demo of Smart Beach",
@@ -15,7 +15,7 @@ const projectCards = [
     imgSrc: "/thumbnails/BudgetAppThumbnail.webp",
     imgAlt: "Budget Capital Thumbnail",
     description:
-      "Budget Capital is a full-stack budgeting app developed as a practice project using the MERN stack. It allows users to manage their finances effectively by tracking income and expenses, categorizing transactions, and visualizing data through pie charts. Users can also set monthly budgets and view their financial history. Built collaboratively with a friend, the app focuses on user-friendly functionality and practical financial insights.",
+      "Full-stack budgeting app built collaboratively using the MERN stack. Features include income/expense tracking, transaction categorization, budget setting, and data visualization via pie charts. To help users manage and visualize their finances effectively.",
     githubUrl: "https://github.com/Jenna-Deamer/Budget-Capital",
     demoUrl: "https://budget-capital-frontend.onrender.com/login",
     AriaLabel: "Visit live Demo of Budget Capital",

@@ -7,12 +7,12 @@ const SkillCards = [
     {
         icon: <FontAwesomeIcon icon={faReact} />,
         title: "React.js",
-        description: "Developed interactive web applications with React, focusing on responsive design and real-time data handling."
+        description: "Developed interactive web applications focused on responsive design and real-time data handling."
     },
     {
         icon: <FontAwesomeIcon icon={faDrupal} />,
         title: "Drupal",
-        description: "Managed content and updates for multilingual ecommerce websites across 40+ regions, including building promotional web forms and landing pages."
+        description: "Managed content and updates for multilingual e-commerce sites, including building promotional web forms and landing pages."
     },
     {
         icon: <FontAwesomeIcon icon={faWordpressSimple} />,
@@ -22,7 +22,7 @@ const SkillCards = [
     {
         icon: <FontAwesomeIcon icon={faCss3Alt} />,
         title: "CSS",
-        description: "Designed responsive, visually appealing layouts with a focus on cross-browser compatibility and user experience."
+        description: "Created responsive, user-friendly layouts emphasizing cross-browser compatibility and accessibility."
     },
     {
         icon: <FontAwesomeIcon icon={faGitAlt} />,
@@ -32,7 +32,7 @@ const SkillCards = [
     {
         icon: <FontAwesomeIcon icon={faPlug} />,
         title: "API Integration",
-        description: "Integrated external APIs into web applications to enhance functionality, such as adding real-time weather data for Smart Beach."
+        description: "Integrated external APIs to enhance web applications with real-time and dynamic features."
     }
 ];
 
