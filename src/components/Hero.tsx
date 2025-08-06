@@ -23,7 +23,7 @@ function Hero() {
                             View Work
                         </a>
                         <a
-                            href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna%20Deamer%20Resume.pdf"
+                            href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna-Deamer-Resume.pdf"
                             className="cta-button"
                             target="_blank"
                             rel="noopener noreferrer"
