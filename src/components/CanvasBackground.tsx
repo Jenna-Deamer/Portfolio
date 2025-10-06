@@ -184,7 +184,7 @@ const CanvasBackground = () => {
     }, []);
 
     return (
-        <canvas
+        <canvas role="presentation"
             ref={canvasRef}
             style={{
                 position: "absolute",

@@ -52,7 +52,7 @@ function Contact() {
                                     aria-hidden="true"
                                 ></i>
                                 <a
-                                    href="https://www.linkedin.com/in/your-profile"
+                                    href="www.linkedin.com/in/jenna-deamer"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -94,7 +94,7 @@ function Contact() {
                                 minLength={10}
                             ></textarea>
                             <div>
-                                <button type="submit" className="cta-button">
+                                <button type="submit" className="cta-button" aria-label="Send Message">
                                     Submit
                                     <i
                                         className="bi bi-send-fill"
