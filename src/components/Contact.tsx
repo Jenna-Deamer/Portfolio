@@ -52,7 +52,7 @@ function Contact() {
                                     aria-hidden="true"
                                 ></i>
                                 <a
-                                    href="www.linkedin.com/in/jenna-deamer"
+                                    href="https://www.linkedin.com/in/jenna-deamer-51b741251/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
