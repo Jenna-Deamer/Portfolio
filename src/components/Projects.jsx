@@ -1,4 +1,6 @@
-import React from 'react';
+import { Laptop } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../styles/Projects.css";
 import projectCards from "../data/ProjectData";
 
@@ -33,11 +35,11 @@ function Projects() {
                 <div className="button-container">
                   {card.demoUrl && (
                     <a href={card.demoUrl}  target="_blank" rel="noopener noreferrer" className="cta-button">
-                      <i className="bi bi-laptop"></i> Demo
+                      <Laptop aria-hidden="true" /> Demo
                     </a>
                   )}
                   <a href={card.githubUrl} className="cta-button"  target="_blank" rel="noopener noreferrer">
-                    <i className="bi bi-github"></i> Github
+                    <FontAwesomeIcon icon={faGithub} aria-hidden="true" /> Github
                   </a>
                 </div>
               </div>

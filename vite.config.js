@@ -7,6 +7,7 @@ export default defineConfig({
     sourcemap: true
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+    dedupe: ['react', 'react-dom'],
+    extensions: ['.js', '.jsx']
   }
 })

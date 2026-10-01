@@ -1,165 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
     --font-primary: 'Poppins', sans-serif;
 
-    /* Font sizes */
-    --font-size-hero: 3rem;
-    --font-size-subtitle: 2.5rem;
-    --font-size-large: 1.4rem;
+    --font-size-hero: clamp(2.5rem, 6vw, 4.75rem);
+    --font-size-h2: clamp(2rem, 4vw, 3rem);
+    --font-size-h3: 1.35rem;
     --font-size-body: 1rem;
     --font-size-small: 0.875rem;
-   
-    /* Font weights */
-    --font-weight-light: 300;
+
     --font-weight-regular: 400;
-    --font-weight-medium: 600;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
-    /* Line heights */
-    --line-height-heading: 1.2;
-    --line-height-body: 1.5;
+    --line-height-heading: 1.15;
+    --line-height-body: 1.65;
 
-    /* Letter spacing */
-    --letter-spacing-tight: -0.02em;
-    --letter-spacing-normal: 0;
-    --letter-spacing-wide: 0.05em;
+    --bg-page: #08131f;
+    --bg-surface: #102235;
+    --bg-surface-alt: #16304a;
+    --bg-elevated: #1b3a57;
 
-    /* Colors */
-    --primary-color: #0B2B40;
-    --white: #F5F5F5;
-    --black: #0A0A0A;
+    --text-primary: #f3f6fb;
+    --text-secondary: #b8c6d8;
+    --text-muted: #8ea0b5;
 
-    --deep-blue: #061720;
-    --mid-blue: #0d3b56;
-    --light-blue: #1a4d6d;
-    --deep-orange: #c26316;
-    
-    --action-color: #e07c1f;
-    --action-color-hover: #ff9e4f;
-    --action-active-color: #ff7e00;
+    --border-soft: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.18);
 
-    --gradient-1: linear-gradient(145deg, var(--primary-color), #0d3b56);
+    --accent: #e07c1f;
+    --accent-hover: #f1913a;
+    --accent-active: #c96813;
+    --accent-soft: rgba(224, 124, 31, 0.16);
 
-  
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.22);
+    --shadow-card: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+    --content-width: 1200px;
+    --section-spacing: 6rem;
 }
 
-@media (max-width: 768px) {
-    :root {
-      /* Reduce font sizes for mobile */
-      --font-size-hero: 2.2rem;
-      --font-size-subtitle: 1.8rem;
-      --font-size-large: 1.2rem;
-      --font-size-body: 0.95rem;
-      --font-size-small: 0.8rem;
-    }
-  
-    body {
-      line-height: var(--line-height-body);
-    }
-  
-    h1, h2, h3, h4, h5, h6 {
-      line-height: 1.3;
-    }
-  }
-/* Global styles */
-*{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
-    margin: unset;
-    padding: unset;
-}  
+}
+
 body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--bg-page);
+    color: var(--text-primary);
     font-family: var(--font-primary);
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
-    color: var(--white);
     overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-/* Headings */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: var(--text-primary);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 h1 {
-    font-size: var(--font-size-hero) !important;
+    font-size: var(--font-size-hero);
 }
 
 h2 {
-   font-size: var(--font-size-subtitle) !important;
+    font-size: var(--font-size-h2);
 }
 
-/* Small text */
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
 small {
+    color: var(--text-muted);
     font-size: var(--font-size-small);
-    color: var(--color-secondary);
 }
 
-/*Buttons*/
-.cta-button {
-    color: var(--white);
-    background-color: var(--action-color);
-    border: 2px solid var(--action-color);
-    font-weight: var(--font-weight-medium);
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 8px;
-    transition: all 0.2s ease-out;
-    min-width: 150px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: var(--action-color-hover);
-    transform: translateY(-3px);
-  }
 
-  .cta-button{
-    transition: transform 0.2s ease;
-  }
-  .cta-button:active {
-    transform: scale(0.95);
-  }
-
-
-
-  section {
-    margin: 0 auto;
-    color: var(--white); 
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    padding: 1.5rem;
+section {
     width: 100%;
-    max-width: 100%;
+    padding: var(--section-spacing) 1.5rem;
 }
 
-#skills {
-    background: linear-gradient(135deg, var(--primary-color), var(--mid-blue));
+.section-inner {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
-#projects {
-    background: linear-gradient(135deg, var(--deep-blue), var(--primary-color));
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+
+    background: var(--accent);
+    color: #fff;
+
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
-#contact {
-    background: linear-gradient(145deg, var(--mid-blue), var(--light-blue));
+.cta-button:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
 }
-@media (max-width: 990px) {
+
+.cta-button:active {
+    background: var(--accent-active);
+    border-color: var(--accent-active);
+}
+
+.cta-button:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-soft);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 4rem;
+    }
+
     section {
-        scroll-margin-top: 200px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

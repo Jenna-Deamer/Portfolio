@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faDrupal, faGitAlt , faCss3Alt, faWordpressSimple  } from '@fortawesome/free-brands-svg-icons'; 
 import { faPlug } from '@fortawesome/free-solid-svg-icons';
