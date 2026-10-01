@@ -138,13 +138,13 @@
 }
 
 .hero-buttons .cta-button--secondary {
-    background: rgba(16, 34, 53, 0.65);
+    background: var(--bg-surface-alt);
     color: var(--text-primary);
     border-color: var(--border-strong);
 }
 
 .hero-buttons .cta-button--secondary:hover {
-    background: var(--bg-surface-alt);
+    background: var(--bg-elevated);
     border-color: var(--accent);
 }
 
