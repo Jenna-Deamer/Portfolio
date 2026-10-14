@@ -25,9 +25,6 @@ function Nav() {
         id="primary-navigation"
       >
         <li className="nav-item">
-          <a className="nav-link" href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
-        </li>
-        <li className="nav-item">
           <a className="nav-link" href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
         </li>
         <li className="nav-item">

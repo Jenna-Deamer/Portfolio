@@ -38,6 +38,7 @@
     --shadow-card: 0 10px 24px rgba(0, 0, 0, 0.18);
 
     --content-width: 1200px;
+    --content-width-wide: 1440px;
     --section-spacing: 6rem;
 }
 
@@ -163,6 +164,17 @@ section {
 .cta-button:active {
     background: var(--accent-active);
     border-color: var(--accent-active);
+}
+
+.cta-button--secondary {
+    background: var(--bg-surface-alt);
+    color: var(--text-primary);
+    border-color: var(--border-strong);
+}
+
+.cta-button--secondary:hover {
+    background: var(--bg-elevated);
+    border-color: var(--accent);
 }
 
 .cta-button:focus-visible,
