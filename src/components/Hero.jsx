@@ -1,52 +1,45 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import "../styles/Hero.css";
 
 function Hero() {
   return (
-    <section id="hero">
+    <section id="hero" aria-labelledby="hero-title">
       <div className="hero-container">
-        <div className="image-content">
-          <div className="hero-photo-frame">
-            <img src="/profile.webp" alt="Jenna Deamer" />
-          </div>
-        </div>
-
         <div className="text-content">
-          <h1>
-            Hi, I&apos;m
-            <br />
-            <span className="accent-text">Jenna Deamer</span>
+          <p className="hero-eyebrow">Web Developer at Napoleon</p>
+
+          <h1 id="hero-title">
+            <span className="hero-greeting">Hi, I&apos;m</span>
+            Jenna Deamer<span className="accent-dot" aria-hidden="true">.</span>
           </h1>
 
-          <p className="hero-eyebrow">
-            <span className="status-dot" aria-hidden="true" />
-            Web Developer at Napoleon
-          </p>
-
           <p className="hero-lead">
-            I build practical, full-stack web experiences that solve real business problems.
+            I work on the website at Napoleon, and build full-stack apps on my
+            own time.
           </p>
 
           <p className="hero-statement">
-            At Napoleon, I build and maintain multilingual web experiences across 40+ regions,
-            including landing pages, forms, and CMS-driven content. Outside of work, I continue
-            growing my full-stack skills through independent projects.
+            At work that means pages, emails and CMS content for
+            Napoleon&apos;s fireplace, grill and HVAC businesses, in more than 40
+            regions. Outside of work I&apos;m building Money Kiwi, a finance
+            tracker I made for myself, and working through The Odin Project.
           </p>
 
           <div className="hero-buttons">
             <a href="#projects" className="cta-button">
-              View Projects
-              <ArrowRight aria-hidden="true" />
+              See my work
+              <ArrowDown aria-hidden="true" />
             </a>
 
-            <a
-              href="https://a4fhjldpt1w2fedr.public.blob.vercel-storage.com/Jenna-Deamer-Resume.pdf"
-              className="cta-button cta-button--secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
+            <a href="#contact" className="cta-button cta-button--secondary">
+              Get in touch
             </a>
+          </div>
+        </div>
+
+        <div className="image-content">
+          <div className="hero-photo-frame">
+            <img src="/profile.webp" alt="Portrait of Jenna Deamer" width="270" height="360" />
           </div>
         </div>
       </div>
