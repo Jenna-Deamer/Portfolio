@@ -1,76 +1,127 @@
 .navbar {
-    background-color: var(--primary-color);
-    font-weight: var(--font-weight-medium);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--nav-height);
+    padding: 0.5rem 1.5rem;
+
+    background-color: rgba(8, 19, 31, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-soft);
 }
 
-.navbar-nav .nav-link {
-    color: var(--white);
+.navbar-brand {
+    display: inline-flex;
+    border-radius: 50%;
+}
+
+.navbar-toggler {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: var(--text-primary);
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
     position: relative;
-    padding: 5px 10px;
+    padding: 0.25rem 0;
+
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-/* Link Hover Animation */
-.nav-link::before,
-.nav-link::after,
-.nav-link > span::before,
-.nav-link > span::after {
-    content: '';
-    position: absolute;
-    background-color: var(--white);
-    transition: all 0.3s ease;
-}
-
-.nav-link::before,
 .nav-link::after {
-    width: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
     height: 2px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
 }
 
-.nav-link > span::before,
-.nav-link > span::after {
-    width: 2px;
-    height: 0;
+.nav-link:hover {
+    color: var(--text-primary);
 }
 
-.nav-link::before { top: 0; left: 0; }
-.nav-link::after { bottom: 0; right: 0; }
-.nav-link > span::before { left: 0; bottom: 0; }
-.nav-link > span::after { right: 0; top: 0; }
-
-.nav-link:hover::before,
-.nav-link:hover::after { width: 100%; }
-
-.nav-link:hover > span::before,
-.nav-link:hover > span::after { height: 100%; }
-
-/* Logo */
-nav img {
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
+.nav-link:hover::after {
+    transform: scaleX(1);
 }
 
-nav img:hover {
-    border-color: var(--white);
-    border-radius: 100em;
-    transform: scale(1.1);
+.nav-resume {
+    min-height: 40px;
+    padding: 0.4rem 1rem;
 }
-/* Mobile Navigation Styles */
-@media screen and (max-width: 991px) {
-    .navbar-nav .nav-link {
-        padding: 10px;
+
+@media (max-width: 720px) {
+    .navbar {
+        padding: 0.5rem 1rem;
     }
 
-    /* Remove animation borders on mobile */
-    .nav-link::before,
-    .nav-link::after,
-    .nav-link > span::before,
-    .nav-link > span::after {
+    .navbar-toggler {
+        display: inline-flex;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 0.75rem 1rem 1.25rem;
+
+        background-color: var(--bg-page);
+        border-bottom: 1px solid var(--border-soft);
+
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+
+    .navbar-links.is-open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .nav-link::after {
         display: none;
     }
 
-    /* Add background hover effect for mobile */
-    .nav-link:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        transition: background-color 0.3s ease;
+    .nav-resume {
+        width: 100%;
+        margin-top: 0.5rem;
     }
 }

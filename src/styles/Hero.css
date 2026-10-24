@@ -1,85 +1,152 @@
 #hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  }
-  
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(4.5rem, 11vw, 8rem) clamp(1rem, 3vw, 2rem);
+    background-color: var(--bg-page);
+}
+
+/* Faint dot grid, fading out towards the bottom */
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent);
+    mask-image: linear-gradient(to bottom, #000 50%, transparent);
+}
+
+.hero-container {
     width: 100%;
-    max-width: 1200px;
- 
-  }
+    max-width: var(--content-width);
+    margin: 0 auto;
 
-  .hero-container h1{
-    margin-bottom: 1rem;
-  }
-  .hero-statement{
-    font-size: 1.25rem;
-  }
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .image-content {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     align-items: center;
-  }
-  
-  .image-content img {
-    border-radius: 24px;
-    height: 400px;
-    object-fit: cover;
-  }
+    gap: 4rem;
+}
 
-  .hero-buttons {
+.text-content {
+    max-width: 700px;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--accent);
+}
+
+.text-content h1 {
+    margin-bottom: 1.75rem;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+}
+
+.hero-greeting {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    color: var(--text-secondary);
+    font-size: 0.32em;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0;
+}
+
+.hero-lead {
+    max-width: 600px;
+    margin-bottom: 1rem;
+
+    color: var(--text-primary);
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+}
+
+.hero-statement {
+    max-width: 600px;
+    line-height: 1.75;
+}
+
+.hero-buttons {
     display: flex;
-    gap: 1em;
-    margin-top: 1rem;
-  }
-  .hero-buttons a{
-    width: 180px
-  }
-  
-/*MOBILE*/
-  @media (max-width: 900px) {
-    #hero {
-        padding-top: 150px;
-    
-    }
-    .hero-container{
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .hero-statement {
-        font-size: 1.1rem;
-    }
-    .image-content img {
-      max-height: 350px;
-      margin-bottom: 1rem;
-    }
-    .hero-buttons{
-      justify-content: center;
-      margin-top: .2rem;
-    }
-  }
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.25rem;
+}
 
-  @media (max-width: 600px) {
-    .image-content img {
-        max-height: 300px;
-        margin-bottom: 1rem;
-      }
-  }
+.image-content {
+    display: flex;
+    justify-content: center;
+}
 
-@media (max-width: 390px){
-    .hero-buttons{
+/* Square-cornered photo with a solid orange block offset behind it */
+.hero-photo-frame {
+    position: relative;
+    width: min(320px, 100%);
+}
+
+.hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: var(--accent);
+    transform: translate(16px, 16px);
+}
+
+.hero-photo-frame img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    border: 2px solid var(--text-primary);
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .image-content {
+        order: -1;
+        justify-content: flex-start;
+    }
+
+    .hero-photo-frame {
+        width: min(220px, 60%);
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-buttons {
         flex-direction: column;
-        align-items: center;
-        gap: 0.75em;
-      }
+    }
+
+    .hero-buttons .cta-button {
+        width: 100%;
+    }
 }
