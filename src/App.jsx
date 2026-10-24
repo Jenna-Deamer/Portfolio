@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
 import Footer from './components/Footer'
 
 // Vercel Analytics
@@ -13,12 +14,14 @@ inject();
 function App() {
   return (
     <>
+      <a className="skip-link" href="#main">Skip to content</a>
       <Nav />
-      <main>
+      <main id="main" tabIndex="-1">
         <Hero />
         <Projects />
-        <Footer />
+        <Experience />
       </main>
+      <Footer />
       <SpeedInsights />
     </>
   )
