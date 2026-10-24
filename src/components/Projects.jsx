@@ -6,11 +6,12 @@ import projectCards from "../data/ProjectData";
 
 function Projects() {
   return (
-    <section id="projects">
-      <div className="projects-inner">
-        <div className="projects-heading">
-          <h2>Projects</h2>
-        </div>
+    <section id="projects" aria-labelledby="projects-title">
+      <div className="section-inner">
+        <header className="section-head">
+          <p className="section-label">Selected work</p>
+          <h2 id="projects-title">My Projects</h2>
+        </header>
 
         <div className="projects-list">
           {projectCards.map((project, index) => (
@@ -18,19 +19,20 @@ function Projects() {
               key={project.title}
               className={`project ${index % 2 !== 0 ? "project--reverse" : ""}`}
             >
-              <div className="project-image">
-                <img
-                  src={project.imgSrc}
-                  alt={project.imgAlt}
-                />
-              </div>
+              {/* Clickable for mouse users; keyboard and screen reader users get the buttons below */}
+              <a
+                className="project-image"
+                href={project.demoUrl ?? project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                tabIndex={-1}
+                aria-hidden="true"
+              >
+                <img src={project.imgSrc} alt="" loading="lazy" />
+              </a>
 
               <div className="project-content">
-                {project.category && (
-                  <p className="project-category">
-                    {project.category}
-                  </p>
-                )}
+                <p className="project-category">{project.category}</p>
 
                 <div className="project-heading">
                   <h3 className="project-title">{project.title}</h3>
@@ -43,7 +45,22 @@ function Projects() {
                   {project.description}
                 </p>
 
-                <ul className="project-skills" aria-label="Technologies used">
+                {project.built && (
+                  <div className="project-built">
+                    <h4>What I built</h4>
+                    <ul>
+                      {project.built.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {project.note && (
+                  <p className="project-note">{project.note}</p>
+                )}
+
+                <ul className="tag-list" aria-label="Technologies used">
                   {project.skills.map((skill) => (
                     <li key={skill}>{skill}</li>
                   ))}
@@ -57,7 +74,8 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="cta-button"
                     >
-                      Live Demo
+                      Live demo
+                      <span className="sr-only">of {project.title} (opens in a new tab)</span>
                       <ExternalLink aria-hidden="true" />
                     </a>
                   )}
@@ -69,7 +87,8 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="cta-button cta-button--secondary"
                     >
-                      GitHub
+                      Code
+                      <span className="sr-only">for {project.title} on GitHub (opens in a new tab)</span>
                       <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
                     </a>
                   )}

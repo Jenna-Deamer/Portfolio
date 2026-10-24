@@ -1,29 +1,38 @@
 const projectCards = [
   {
     title: "Money Kiwi",
-    subtitle: "Budgeting App",
-    category: "Personal Project",
+    subtitle: "Personal finance tracker",
+    category: "Personal project · Ongoing",
     imgSrc: "/thumbnails/MoneyKiwiThumbnail.png",
-    imgAlt: "Money Kiwi budgeting dashboard",
     description:
-      "A full-stack personal budgeting application built for real-world use. Money Kiwi lets users manage accounts, income, expenses, transfers, recurring transactions, and investment activity without connecting directly to financial institutions. I built the frontend, API, database structure, authentication flow, email verification, recurring transaction logic, demo sessions, and financial dashboards. The app is designed around clear financial data, privacy, and practical day-to-day budgeting.",
+      "I built Money Kiwi for myself. Most budgeting apps want you to link your bank, and I didn't want mine connected to anything, so I made my own. It's an ongoing hobby project, and next on my list are a CSV importer to cut down on manual entry and contribution tracking for TFSA and FHSA accounts.",
+    built: [
+      "Recurring transactions for known costs like rent and paycheques, which you can pause or adjust anytime",
+      "Accounts grouped by type, such as chequing, savings, credit and TFSA, so related accounts show up together",
+      "Categories with subcategories, for finer organization and clearer charts",
+      "An overview page that gives you a quick snapshot of your last 30 days",
+      "A dashboard with cash flow and investment analytics over any time range you choose",
+    ],
     githubUrl: "https://github.com/Jenna-Deamer/money-kiwi",
     demoUrl: "https://moneykiwi.com/login",
-    AriaLabel: "Visit the live Money Kiwi demo",
-    skills: ["React", "Express", "PostgreSQL", "Prisma", "Node.js"],
+    skills: ["React", "TanStack Query", "Zod", "Express", "PostgreSQL", "Prisma"],
   },
 
   {
-    title: "NASA Space Apps 2025",
-    subtitle: "Air Quality Forecasting",
-    category: "Hackathon Project",
+    title: "Tempo Analytics",
+    subtitle: "NASA Space Apps 2025",
+    category: "Hackathon · Honourable mention",
     imgSrc: "/thumbnails/SpaceApps2025Thumbnail.webp",
-    imgAlt: "NASA Space Apps air quality forecasting application",
     description:
-      "Honorable Mention at Lakehead University's NASA Space Apps 2025 challenge. This web app integrates hourly TEMPO satellite data with ground-based air quality measurements to provide real-time local forecasts. I designed the results sidebar, timelapse preview, and forecast visualizations to make complex environmental data easier to understand.",
+      "NASA's TEMPO satellite collects huge amounts of air quality data, but it's hard for most people to make sense of. For NASA Space Apps 2025, our team of three turned it into a map that tells you when it's safe to go outside, when you might want to limit your time outdoors or take other precautions, and whether conditions are safe for people with health risks.",
+    built: [
+      "A results sidebar that turns the backend's satellite, ground-station and forecast data into one simple readout",
+      "A traffic-light colour system you can read at a glance: green is safe for everyone, yellow is a caution for at-risk people, and red means unsafe",
+      "A satellite timelapse with playback controls, so you can watch pollution move across the map",
+    ],
+    note: "The demo is an archived snapshot. The satellite overlay is real NO₂ data from August 2025; the other readings are sample data.",
     githubUrl: "https://github.com/Jenna-Deamer/2025-space-apps-frontend",
-    // demoUrl: "https://tempo-analytics.vercel.app/",
-    AriaLabel: "Visit live demo of NASA Space Apps project",
+    demoUrl: "https://tempo-analytics.vercel.app/",
     skills: ["Vue.js", "Ionic", "Leaflet"],
   },
 ];
