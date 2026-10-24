@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --font-primary: 'Poppins', sans-serif;
+    --font-primary: 'Poppins', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-    --font-size-hero: clamp(2.5rem, 6vw, 4.75rem);
-    --font-size-h2: clamp(2rem, 4vw, 3rem);
+    --font-size-hero: clamp(2.75rem, 7vw, 5.5rem);
+    --font-size-h2: clamp(2.25rem, 5vw, 3.75rem);
     --font-size-h3: 1.35rem;
     --font-size-body: 1rem;
     --font-size-small: 0.875rem;
@@ -13,33 +14,40 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-black: 800;
 
-    --line-height-heading: 1.15;
+    --line-height-heading: 1.1;
     --line-height-body: 1.65;
 
     --bg-page: #08131f;
-    --bg-surface: #102235;
-    --bg-surface-alt: #16304a;
-    --bg-elevated: #1b3a57;
+    --bg-surface: #0e1c2c;
+    --bg-surface-alt: #13263a;
+    --bg-elevated: #1a3249;
 
     --text-primary: #f3f6fb;
     --text-secondary: #c7d3e2;
     --text-muted: #8ea0b5;
 
     --border-soft: rgba(255, 255, 255, 0.1);
-    --border-strong: rgba(255, 255, 255, 0.18);
+    --border-strong: rgba(255, 255, 255, 0.2);
 
+    /* Logo orange */
     --accent: #e07c1f;
     --accent-hover: #f1913a;
     --accent-active: #c96813;
-    --accent-soft: rgba(224, 124, 31, 0.16);
+    --accent-soft: rgba(224, 124, 31, 0.14);
+    --on-accent: #08131f;
 
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.22);
-    --shadow-card: 0 10px 24px rgba(0, 0, 0, 0.18);
+    /* Deeper orange for filled buttons so white text passes WCAG AA (4.76:1) */
+    --button-bg: #b45a0a;
+    --button-bg-hover: #a04f08;
+    --button-bg-active: #8f4607;
+
+    --radius: 6px;
 
     --content-width: 1200px;
-    --content-width-wide: 1440px;
-    --section-spacing: 6rem;
+    --section-spacing: 7rem;
+    --nav-height: 4.5rem;
 }
 
 *,
@@ -50,6 +58,20 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
 
 body {
@@ -61,6 +83,11 @@ body {
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
     overflow-x: hidden;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--on-accent);
 }
 
 img {
@@ -102,10 +129,13 @@ h6 {
 
 h1 {
     font-size: var(--font-size-hero);
+    font-weight: var(--font-weight-black);
 }
 
 h2 {
     font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-black);
+    letter-spacing: -0.02em;
 }
 
 h3 {
@@ -121,6 +151,9 @@ small {
     font-size: var(--font-size-small);
 }
 
+main:focus {
+    outline: none;
+}
 
 section {
     width: 100%;
@@ -133,18 +166,69 @@ section {
     margin: 0 auto;
 }
 
+.section-head {
+    margin-bottom: 3.5rem;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-label::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--accent);
+}
+
+.accent-dot {
+    color: var(--accent);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    padding: 0.3rem 0.65rem;
+
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
 .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     min-height: 44px;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.35rem;
 
-    border: 1px solid var(--accent);
-    border-radius: 10px;
+    border: 2px solid var(--button-bg);
+    border-radius: var(--radius);
 
-    background: var(--accent);
+    background: var(--button-bg);
     color: #fff;
 
     font-weight: var(--font-weight-semibold);
@@ -153,44 +237,88 @@ section {
 
     transition:
         background-color 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.cta-button svg {
+    width: 1.1em;
+    height: 1.1em;
 }
 
 .cta-button:hover {
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
+    background: var(--button-bg-hover);
+    border-color: var(--button-bg-hover);
 }
 
 .cta-button:active {
-    background: var(--accent-active);
-    border-color: var(--accent-active);
+    background: var(--button-bg-active);
+    border-color: var(--button-bg-active);
 }
 
 .cta-button--secondary {
-    background: var(--bg-surface-alt);
+    background: transparent;
     color: var(--text-primary);
     border-color: var(--border-strong);
 }
 
 .cta-button--secondary:hover {
-    background: var(--bg-elevated);
+    background: var(--accent-soft);
     border-color: var(--accent);
 }
 
-.cta-button:focus-visible,
+.cta-button--secondary:active {
+    background: var(--accent-soft);
+}
+
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid var(--accent-soft);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: var(--font-weight-semibold);
+
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 @media (max-width: 768px) {
     :root {
-        --section-spacing: 4rem;
+        --section-spacing: 4.5rem;
     }
 
     section {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .section-head {
+        margin-bottom: 2.5rem;
     }
 }
