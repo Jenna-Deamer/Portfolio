@@ -28,6 +28,7 @@
     position: relative;
     display: block;
     overflow: hidden;
+    aspect-ratio: 1334 / 992;
 
     background: var(--bg-surface);
     border: 1px solid var(--border-strong);
@@ -57,7 +58,13 @@
 
 .project-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keep the results sidebar in view when filling the matching frame */
+.project--reverse .project-image img {
+    object-position: right center;
 }
 
 .project-content {
