@@ -29,7 +29,6 @@ const projectCards = [
       "Built a multi-step React interface that presents information progressively, keeping the workflow intuitive without overwhelming users with unnecessary data or inputs",
       "Integrated the team's backend APIs to retrieve satellite-derived crop estimates and display personalized five-year crop rotation recommendations",
     ],
-    note: "The demo is an archived snapshot. The satellite overlay is real NO₂ data from August 2025; the other readings are sample data.",
     githubUrl: "https://github.com/Erric-Cheung/spaceapps-2026-frontend.git",
     demoUrl: "https://www.agi-spaceapps.earth/",
     skills: ["React", "Leaflet"],
