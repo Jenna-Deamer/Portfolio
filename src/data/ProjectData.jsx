@@ -30,7 +30,7 @@ const projectCards = [
       "Integrated the team's backend APIs to retrieve satellite-derived crop estimates and display personalized five-year crop rotation recommendations",
     ],
     note: "The demo is an archived snapshot. The satellite overlay is real NO₂ data from August 2025; the other readings are sample data.",
-    githubUrl: "https://github.com/Jenna-Deamer/2025-space-apps-frontend",
+    githubUrl: "https://github.com/Erric-Cheung/spaceapps-2026-frontend.git",
     demoUrl: "https://www.agi-spaceapps.earth/",
     skills: ["React", "Leaflet"],
   },
