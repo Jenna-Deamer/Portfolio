@@ -17,12 +17,28 @@ const projectCards = [
     demoUrl: "https://moneykiwi.com/login",
     skills: ["React", "TanStack Query", "Zod", "Express", "PostgreSQL", "Prisma"],
   },
-
+  {
+    title: "Agricultural General Intelligence",
+    subtitle: "NASA Space Apps 2026",
+    category: "Hackathon · Local Innovation Award",
+    imgSrc: "/thumbnails/SpaceApps2026Thumbnail.png",
+    description:
+      "Farmers need to balance soil health, crop suitability, and profitability when deciding what to grow next. For NASA Space Apps 2026, our team built a tool that uses satellite-derived crop history and agricultural data to help farmers plan their next five years. Farmers select their fields on a map, review and correct satellite-estimated crop data, then compare recommended crop rotations based on soil health, growing conditions, and estimated income.",
+    built: [
+      "Led frontend development, planning the user journey and how farmers would interact with the app from field selection to rotation results",
+      "Built a multi-step React interface that presents information progressively, keeping the workflow intuitive without overwhelming users with unnecessary data or inputs",
+      "Integrated the team's backend APIs to retrieve satellite-derived crop estimates and display personalized five-year crop rotation recommendations",
+    ],
+    note: "The demo is an archived snapshot. The satellite overlay is real NO₂ data from August 2025; the other readings are sample data.",
+    githubUrl: "https://github.com/Erric-Cheung/spaceapps-2026-frontend.git",
+    demoUrl: "https://www.agi-spaceapps.earth/",
+    skills: ["React", "Leaflet"],
+  },
   {
     title: "Tempo Analytics",
     subtitle: "NASA Space Apps 2025",
     category: "Hackathon · Honourable mention",
-    imgSrc: "/thumbnails/SpaceApps2025Thumbnail.webp",
+    imgSrc: "/thumbnails/SpaceApps2025Thumbnail.png",
     description:
       "NASA's TEMPO satellite collects huge amounts of air quality data, but it's hard for most people to make sense of. For NASA Space Apps 2025, our team of three turned it into a map that tells you when it's safe to go outside, when you might want to limit your time outdoors or take other precautions, and whether conditions are safe for people with health risks.",
     built: [
